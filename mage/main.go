@@ -422,7 +422,7 @@ func Invoke(inv Invocation) int {
 	sort.Sort(info.Funcs)
 	sort.Sort(info.Imports)
 
-	main := filepath.Join(inv.Dir, mainfile)
+	main := filepath.Join(inv.WorkDir, mainfile)
 	binaryName := "mage"
 	if inv.CompileOut != "" {
 		binaryName = filepath.Base(inv.CompileOut)
